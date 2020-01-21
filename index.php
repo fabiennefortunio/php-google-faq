@@ -53,10 +53,11 @@ $faqs=[
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Document</title>
+    <title>Google Faq</title>
 </head>
 <body>
 <!-- <img src="http://www.brandemia.org/sites/default/files/sites/default/files/logo_google_nuevo.jpg" alt=""> -->
+<div class="menu">
 <ul class="nav">
   <li class="nav-item">
     <a class="nav-link active" href="#">Active</a>
@@ -71,11 +72,14 @@ $faqs=[
     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
   </li>
 </ul>
+</div>
 
 
     
 
     <?php
+    
+//   NOTES:  <?= equal to <?php echo 
 foreach($faqs as $faq){
     $question=$faq[0];
     $paragraphs=$faq[1];
@@ -83,11 +87,13 @@ foreach($faqs as $faq){
     <p class="question"><?= $question ?></p>
     <?php
     foreach($paragraphs as $paragraph){ ?>
-        <p class="paragraph"><?= $paragraph ?></p>
+        <p class="paragraph"><?= $paragraph ?></p>  
     <?php } ?>
         <br>
         <br>
 <?php }
 ?>
+<footer>
+</footer>
 </body>
 </html>
